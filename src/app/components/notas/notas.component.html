@@ -1,1 +1,24 @@
-<p>notas works!</p>
+<section class="notas">
+	<div class="container">
+		<h1>Notas</h1>
+		Materia: <input type="text" #materia class="input-materia"><br><br>
+		Nota: <input type="number" #punteo><br><br>
+		<button type="button" (click)="agregaInformacion(materia.value, punteo.value)">Agregar Nota</button>
+	</div>
+	<div class="resultado">
+		<table>
+			<thead class="theade">
+				<tr>
+					<th>Materia</th>
+					<th>Nota</th>
+				</tr>
+			</thead>
+			<tbody class="tbody">
+				<tr *ngFor="let item of notas" class="item-result">
+					<td class="left">{{item.materia}}</td>
+					<td class="right">{{item.punteo}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
