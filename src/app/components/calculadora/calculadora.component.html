@@ -1,0 +1,15 @@
+<section class="calculadora">
+	<div class="container">
+		Operando 1: <input type="number" [(ngModel)]="operando1"><br>
+		Operando 2: <input type="number" [(ngModel)]="operando2">
+		<div class="items-operadores">
+			<button type="button" (click)="realizarOperacion('+')">+</button>
+			<button type="button" (click)="realizarOperacion('-')">-</button>
+			<button type="button" (click)="realizarOperacion('*')">*</button>
+			<button type="button" (click)="realizarOperacion('/')">/</button>
+		</div>
+		<div *ngIf="showMessage">
+			<h4>Respuesta {{resultado}}</h4>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>Verificar si es un numero primo</h1>
+	<div class="">
+		<input type="number" [(ngModel)]="numeroPrimo">
+		<button type="button" (click)="muestraResultado()">Es primo?</button>
+		<div *ngIf="showMessage; then thenBlock else elseBlock"></div>
+		<ng-template #thenBlock><h4>Es numero Primo</h4></ng-template>
+		<ng-template #elseBlock><h4>No es Primo</h4></ng-template>
+	</div>
+</div>
